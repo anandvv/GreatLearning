@@ -4,3 +4,6 @@ This is the basic git command project folder
 
 Adding some text
 
+Adding java files
+
+
