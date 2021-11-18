@@ -1,5 +1,3 @@
-package CodingChallenge11;
-
 public class AccountDetails extends CurrentAccount {
 
     double depositAmount;

@@ -1,5 +1,3 @@
-package CodingChallenge11;
-
 public class Account {
     String customerName;
     int accountNo;

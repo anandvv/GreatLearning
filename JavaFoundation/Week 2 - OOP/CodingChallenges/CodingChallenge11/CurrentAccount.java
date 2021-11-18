@@ -1,5 +1,3 @@
-package CodingChallenge11;
-
 public class CurrentAccount extends Account {
     double currentBalance;
 
