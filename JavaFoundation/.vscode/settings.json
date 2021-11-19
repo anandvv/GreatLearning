@@ -1,8 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "Week 2 - OOP/CodingChallenges/CodingChallenge17",
+        "Week 2 - OOP/CodingChallenges/CodingChallenge14",
         "Week 2 - OOP/CodingChallenges/CodingChallenge13",
         "Week 2 - OOP/CodingChallenges/CodingChallenge12",
         "Week 2 - OOP/CodingChallenges/CodingChallenge10",
-        "Week 2 - OOP/CodingChallenges/CodingChallenge14"
+        "Week 2 - OOP/CodingChallenges/Quiz2"
     ]
 }
