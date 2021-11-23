@@ -14,6 +14,6 @@ public class TechDepartment extends SuperDepartment{
 	}
 	
 	public String getTechStackInformation() {
-		return "core Java";
+		return "Core Java";
 	}
 }
