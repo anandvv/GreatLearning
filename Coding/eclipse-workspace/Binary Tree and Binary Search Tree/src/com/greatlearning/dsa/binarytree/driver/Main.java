@@ -7,6 +7,9 @@ import com.greatlearning.dsa.binarytree.BTreeUsingLinkedList.Node;
 
 public class Main {
 
+	private static int minimum;
+	private static int maximum;
+
 	public static void main(String[] args) {
 		//practice 1
 		//binaryTreeUsingArray();
@@ -15,7 +18,16 @@ public class Main {
 		//operationsOnBinaryTreeUsingArray();
 		
 		//practice 3
+		//binaryTreeUsingLinkedList();
+		
+		//practice 4
 		binaryTreeUsingLinkedList();
+		getMinimumAndMaximum();
+	}
+
+	private static void getMinimumAndMaximum() {
+		System.out.println("Minimum: " + minimum);
+		System.out.println("Maximum: " + maximum);
 	}
 
 	private static void binaryTreeUsingLinkedList() {
@@ -33,6 +45,8 @@ public class Main {
 			
 			System.out.println("Binary Tree after insertion...");
 			btree.levelByLevel(root);
+			Main.minimum = btree.getMinimum();
+			Main.maximum = btree.getMaximum();
 			
 			System.out.println("Enter s to stop OR any character to continue... ");
 			status = s.next();

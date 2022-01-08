@@ -6,7 +6,17 @@ import java.util.Queue;
 
 public class BTreeUsingLinkedList {
 	Deque<Node> queue = new LinkedList<Node>();
+	int minimum = Integer.MAX_VALUE;
+	int maximum = Integer.MIN_VALUE;
 	
+	public int getMinimum() {
+		return minimum;
+	}
+
+	public int getMaximum() {
+		return maximum;
+	}
+
 	public static class Node{
 		int key;
 		Node left;
@@ -28,6 +38,15 @@ public class BTreeUsingLinkedList {
 		while(!queue1.isEmpty()) {
 			Node tempNode = queue1.poll();
 			System.out.println(tempNode.key + " ");
+			
+			//Keep track on minimum and maximum values
+			if(tempNode.key < this.minimum) {
+				this.minimum = tempNode.key;
+			}
+			
+			if(tempNode.key > this.maximum) {
+				this.maximum = tempNode.key;
+			}
 			
 			//enqueue left Node
 			if(tempNode.left != null) {
