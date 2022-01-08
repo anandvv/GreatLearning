@@ -3,6 +3,7 @@ package com.greatlearning.dsa.binarytree.driver;
 import java.util.Scanner;
 
 import com.greatlearning.dsa.binarytree.*;
+import com.greatlearning.dsa.binarytree.BTreeUsingLinkedList.Node;
 
 public class Main {
 
@@ -11,7 +12,35 @@ public class Main {
 		//binaryTreeUsingArray();
 		
 		//practice 2
-		operationsOnBinaryTreeUsingArray();
+		//operationsOnBinaryTreeUsingArray();
+		
+		//practice 3
+		binaryTreeUsingLinkedList();
+	}
+
+	private static void binaryTreeUsingLinkedList() {
+		Scanner s = new Scanner(System.in);
+
+		BTreeUsingLinkedList btree = new BTreeUsingLinkedList();
+		String status = "a";
+		Node root = null;
+		
+		while(!status.equals("s")) {
+			System.out.println("Enter an integer value to insert: ");
+			int value= s.nextInt();
+		
+			root = btree.insertNode(root, value);
+			
+			System.out.println("Binary Tree after insertion...");
+			btree.levelByLevel(root);
+			
+			System.out.println("Enter s to stop OR any character to continue... ");
+			status = s.next();
+		}
+		
+		//add code here
+		
+		s.close();
 	}
 
 	private static void templateForPractice() {
