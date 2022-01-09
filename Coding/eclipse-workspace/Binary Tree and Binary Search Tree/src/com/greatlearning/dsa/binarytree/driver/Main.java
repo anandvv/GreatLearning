@@ -21,8 +21,17 @@ public class Main {
 		//binaryTreeUsingLinkedList();
 		
 		//practice 4
+		//binaryTreeUsingLinkedList();
+		//getMinimumAndMaximum();
+		
+		//practice 5 - Operations on Binary Tree Using Linked List
 		binaryTreeUsingLinkedList();
-		getMinimumAndMaximum();
+		performSpecialOperations();
+	}
+
+	private static void performSpecialOperations() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private static void getMinimumAndMaximum() {
