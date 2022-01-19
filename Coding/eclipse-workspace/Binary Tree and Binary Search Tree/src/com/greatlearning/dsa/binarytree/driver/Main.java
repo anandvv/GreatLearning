@@ -31,8 +31,13 @@ public class Main {
 		//performSpecialOperations();
 		
 		//practice 6 - Level Order Traversal
+		//createBinaryTreeUsingLinkedList();
+		//levelOrderTraversal();
+		
+		//practice 7 - In-Order Traversal
 		createBinaryTreeUsingLinkedList();
-		levelOrderTraversal();
+		InOrderTraversal();
+				
 	}
 
 	private static void createBinaryTreeUsingLinkedList() {
@@ -58,8 +63,11 @@ public class Main {
 	}
 	
 	private static void levelOrderTraversal() {
-		// TODO Auto-generated method stub
 		btree.levelOrderTraversal(root);
+	}
+	
+	private static void InOrderTraversal() {
+		btree.inOrderTraversal(root);
 	}
 
 	private static void performSpecialOperations() {

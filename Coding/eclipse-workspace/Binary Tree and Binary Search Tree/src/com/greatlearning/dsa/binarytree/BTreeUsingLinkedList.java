@@ -111,5 +111,17 @@ public class BTreeUsingLinkedList {
 
 		System.out.println("Level Order Traversal Complete!");
 	}
+	
+	public void inOrderTraversal(Node root) {
+		if(root.left != null) {
+			inOrderTraversal(root.left);
+		}
+		
+		System.out.print(root.key + " ");
+		
+		if(root.right!=null) {
+			inOrderTraversal(root.right);
+		}
+	}
 
 }
