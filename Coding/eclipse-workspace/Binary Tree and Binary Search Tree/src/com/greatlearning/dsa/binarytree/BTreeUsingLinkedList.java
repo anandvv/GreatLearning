@@ -2,6 +2,7 @@ package com.greatlearning.dsa.binarytree;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 
 public class BTreeUsingLinkedList {
@@ -86,6 +87,29 @@ public class BTreeUsingLinkedList {
 			}
 		}
 		return root;
+	}
+	
+	public void levelOrderTraversal(Node root) {
+		Deque<Node> tQueue = new LinkedList<Node>();
+		Node temp_node = root;
+		
+		while(temp_node != null) {
+			System.out.print(temp_node.key + " ");
+			if(temp_node.left != null) {
+				tQueue.add(temp_node.left);
+			}
+			if(temp_node.right != null) {
+				tQueue.add(temp_node.right);
+			}
+			
+			try {
+				temp_node = tQueue.remove();
+			}catch(NoSuchElementException ex) {
+				temp_node = null;
+			}
+		}
+
+		System.out.println("Level Order Traversal Complete!");
 	}
 
 }

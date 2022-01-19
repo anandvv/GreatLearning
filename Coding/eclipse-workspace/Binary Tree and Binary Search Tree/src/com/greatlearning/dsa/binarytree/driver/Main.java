@@ -9,6 +9,8 @@ public class Main {
 
 	private static int minimum;
 	private static int maximum;
+	private static BTreeUsingLinkedList btree;
+	private static Node root;
 
 	public static void main(String[] args) {
 		//practice 1
@@ -25,12 +27,45 @@ public class Main {
 		//getMinimumAndMaximum();
 		
 		//practice 5 - Operations on Binary Tree Using Linked List
-		binaryTreeUsingLinkedList();
-		performSpecialOperations();
+		//binaryTreeUsingLinkedList();
+		//performSpecialOperations();
+		
+		//practice 6 - Level Order Traversal
+		createBinaryTreeUsingLinkedList();
+		levelOrderTraversal();
+	}
+
+	private static void createBinaryTreeUsingLinkedList() {
+		Scanner s = new Scanner(System.in);
+
+		btree = new BTreeUsingLinkedList();
+		String status = "a";
+		root = null;
+		
+		while(!status.equals("s")) {
+			System.out.println("Enter an integer value to insert: ");
+			int value= s.nextInt();
+		
+			root = btree.insertNode(root, value);
+			
+			System.out.println("Enter s to stop OR any character to continue... ");
+			status = s.next();
+		}
+		
+		//add code here
+		
+		s.close();
+	}
+	
+	private static void levelOrderTraversal() {
+		// TODO Auto-generated method stub
+		btree.levelOrderTraversal(root);
 	}
 
 	private static void performSpecialOperations() {
 		// TODO Auto-generated method stub
+		String something = "It's " + 5 + "pm";
+		System.out.println(something);
 		
 	}
 
