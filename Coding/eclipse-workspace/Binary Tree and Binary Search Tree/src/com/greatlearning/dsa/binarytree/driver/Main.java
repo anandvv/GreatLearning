@@ -35,9 +35,12 @@ public class Main {
 		//levelOrderTraversal();
 		
 		//practice 7 - In-Order Traversal
+		//createBinaryTreeUsingLinkedList();
+		//InOrderTraversal();
+		
+		//practice 8 - Pre-Order Traversal
 		createBinaryTreeUsingLinkedList();
-		InOrderTraversal();
-				
+		PreOrderTraversal();
 	}
 
 	private static void createBinaryTreeUsingLinkedList() {
@@ -68,6 +71,10 @@ public class Main {
 	
 	private static void InOrderTraversal() {
 		btree.inOrderTraversal(root);
+	}
+	
+	private static void PreOrderTraversal() {
+		btree.preOrderTraversal(root);
 	}
 
 	private static void performSpecialOperations() {

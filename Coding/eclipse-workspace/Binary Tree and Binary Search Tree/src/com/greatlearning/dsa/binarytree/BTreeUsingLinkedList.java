@@ -123,5 +123,18 @@ public class BTreeUsingLinkedList {
 			inOrderTraversal(root.right);
 		}
 	}
+	
+	public void preOrderTraversal(Node root) {
+		System.out.print(root.key + " ");
+		
+		if(root.left != null) {
+			preOrderTraversal(root.left);
+		}
+		
+		if(root.right!=null) {
+			preOrderTraversal(root.right);
+		}
+	}
+	
 
 }
