@@ -18,12 +18,6 @@ public class BTreeUsingLinkedList {
 		return maximum;
 	}
 
-	public static class Node{
-		int key;
-		Node left;
-		Node right;
-	}
-	
 	static Node newNode(int data) {
 		Node temp = new Node();
 		temp.key = data;
