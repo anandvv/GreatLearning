@@ -64,3 +64,22 @@ local.properties
 
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+Coding/eclipse-workspace/Binary Tree and Binary Search Tree/.project
+Coding/eclipse-workspace/Binary Tree and Binary Search Tree/.project
