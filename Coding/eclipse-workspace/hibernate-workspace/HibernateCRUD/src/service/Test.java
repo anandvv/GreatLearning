@@ -15,7 +15,82 @@ public class Test {
 		
 		//queryExample();
 		
-		readMultipleRecords();
+		//readMultipleRecords();
+		
+		//updateExample();
+		
+		deleteExample();
+	}
+
+	private static void deleteExample() {
+		System.out.println("Connecting to database");
+		SessionFactory factory = null;
+		Session session = null;
+		List<Teacher> teachers = null;
+		
+		factory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.buildSessionFactory();
+		
+		System.out.println("created");
+		
+		Transaction tx = null;
+		
+		try {
+			session = factory.getCurrentSession();
+			tx = session.beginTransaction();
+			
+			//update last name of a teacher -- METHOD 1
+			//Teacher teacher = session.get(Teacher.class, 2);
+			//session.delete(teacher);
+			
+			//deleting record using createQuery and executeQuery -- METHOD 2
+			session.createQuery("delete from Teacher where id = 3").executeUpdate();
+			
+			tx.commit();
+		}catch(Exception e) {
+			System.out.println("Error");
+			e.printStackTrace();
+			tx.rollback();
+		}finally {
+			session.close();
+		}
+		
+	}
+
+	private static void updateExample() {
+		System.out.println("Connecting to database");
+		SessionFactory factory = null;
+		Session session = null;
+		List<Teacher> teachers = null;
+		
+		factory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.buildSessionFactory();
+		
+		System.out.println("created");
+		
+		Transaction tx = null;
+		
+		try {
+			session = factory.getCurrentSession();
+			tx = session.beginTransaction();
+			
+			//update last name of a teacher -- METHOD 1
+			Teacher teacher = session.get(Teacher.class, 2);
+			teacher.setL_name("Jones");
+			//session.update(teacher);
+			//METHOD 2 - to update multiple records this is the way
+			session.createQuery("update Teacher set email='sheetal@gl.com' where id=2" ).executeUpdate();
+			
+			tx.commit();
+		}catch(Exception e) {
+			System.out.println("Error");
+			e.printStackTrace();
+			tx.rollback();
+		}finally {
+			session.close();
+		}
 	}
 
 	private static void readMultipleRecords() {
