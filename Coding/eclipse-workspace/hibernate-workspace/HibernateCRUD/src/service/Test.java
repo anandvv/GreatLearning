@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,7 +13,45 @@ public class Test {
 	public static void main(String[] args) {
 		//insertExample();
 		
-		queryExample();
+		//queryExample();
+		
+		readMultipleRecords();
+	}
+
+	private static void readMultipleRecords() {
+		System.out.println("Connecting to database");
+		SessionFactory factory = null;
+		Session session = null;
+		List<Teacher> teachers = null;
+		
+		factory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.buildSessionFactory();
+		
+		System.out.println("created");
+		
+		Transaction tx = null;
+		
+		try {
+			session = factory.getCurrentSession();
+			tx = session.beginTransaction();
+			teachers = session.createQuery("from Teacher where email like '%gl.com'").list();
+			for(Teacher teacher:teachers) {
+				System.out.println(teacher);
+			}
+			tx.commit();
+		}catch(Exception e) {
+			System.out.println("Error");
+			e.printStackTrace();
+			tx.rollback();
+		}finally {
+			session.close();
+		}
+		
+		for(Teacher teacher:teachers) {
+			System.out.println(teacher);
+		}
+		
 	}
 
 	private static void queryExample() {
@@ -24,11 +64,6 @@ public class Test {
 				.buildSessionFactory();
 		
 		System.out.println("created");
-		
-		Teacher t1 = new Teacher("Shalini", "Garg", "shalinig@gl.com");
-		Teacher t2 = new Teacher("Sheetu", "Kapoor", "sheetu@gl.com");
-		Teacher t3 = new Teacher("Ria", "Dhopte", "ria@gl.com");
-		Teacher t4 = new Teacher("Jenny", "Joe", "jenny@gl.com");
 		
 		Transaction tx = null;
 		
