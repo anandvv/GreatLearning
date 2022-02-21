@@ -1,4 +1,4 @@
-package com.greatlearning.main;
+package com.greatlearning.departmentapp.main;
 import com.greatlearning.department.*;
 
 public class Driver {

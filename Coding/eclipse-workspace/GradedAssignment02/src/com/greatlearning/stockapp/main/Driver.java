@@ -1,4 +1,4 @@
-package com.greatlearning.main;
+package com.greatlearning.stockapp.main;
 import java.util.Scanner;
 import com.greatlearning.stockers.*;
 

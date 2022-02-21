@@ -1,4 +1,4 @@
-package com.greatlearning.main;
+package com.greatlearning.emailapp.main;
 import com.greatlearning.model.*;
 import com.greatlearning.service.*;
 

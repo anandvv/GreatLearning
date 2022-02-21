@@ -13,13 +13,13 @@ public class Test {
 	public static void main(String[] args) {
 		//insertExample();
 		
-		//queryExample();
+		queryExample();
 		
 		//readMultipleRecords();
 		
 		//updateExample();
 		
-		deleteExample();
+		//deleteExample();
 	}
 
 	private static void deleteExample() {
