@@ -82,3 +82,9 @@ local.properties
 log/
 target/
 
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/context.xml
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/server.xml
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
+Coding/eclipse-workspace/Servers/Tomcat v9.0 Server at localhost-config/web.xml
