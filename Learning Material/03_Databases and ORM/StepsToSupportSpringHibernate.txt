@@ -1,0 +1,36 @@
+To support Hibernate integration, what are the top 2 beans provided by Spring?
+
+- SQL Connector
+- Hibernate - Session Factory / Transaction Manager
+- LocalSessionFactoryBean
+- HibernateTransactionManager
+
+Steps for running your application using Spring and Hibernate
+
+1) Create maven web application
+2) Update dependencies in your pom.xml
+3) Project Structure
+	- controller
+	- entity
+	- service
+	- dao
+
+	- WEB-INF/views/.jsp files
+	- WEB-INF/web.xml --> Register a DispatcherServlet using 
+	  XML based Spring Configuration
+	- WEB-INF/{lmsapp}-servlet.xml
+		Anything to do with Spring and Hibernate config
+		View resolver
+		Hibernate configuration
+		Define the beans
+4) Code files
+	- Entity (Book.java)
+5) Spring MVC Controller file
+6) Service Layer 
+	--> BookService.java, and BookServiceImpl.java
+7) DAO Layer 
+	--> Interact and do transactions with your database
+	--> Industry standard does this in Service Layer
+8) JSP views
+9) CSS and JS
+	Resources for UI
