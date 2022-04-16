@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <title>A1 Furniture Online</title>
+    <style>
+        header{
+            top: 0%;
+            padding: 2%;
+            position: fixed;
+            text-align: center;
+            vertical-align: middle;
+            font-size: xx-large;
+            z-index: 1;
+            padding-top: 10px;
+            background-color: rgb(182, 211, 224);
+            width: 100%;
+        }
+        #sidebar{
+            top: 12%;
+            position: fixed;
+            width: 140px;
+            max-width: 140px;
+            max-height: 80%;
+            padding: 20px;
+            float: left;
+            overflow-y: auto;
+            background-color: rgb(248, 237, 237);
+            color: #29627e;
+        }
+        section{
+            position: relative;
+            margin-top: 5%;
+            width: 75%;
+            padding: 10px;
+            margin-left: 200px;
+        }
+        .container {
+            display: inline-block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            max-width: 300px;
+            margin: 2px;
+        }
+
+        .container, .image, .overlay{
+            border-radius: 10px;
+        }
+        
+        .image {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0; 
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #f1f1f1; 
+            width: 260px;
+            max-width: 300px;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+        .main{
+            margin-bottom: 20%;
+        }
+        .copyright{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>A1 Furniture</header>
+
+    <aside id="sidebar">
+        <div>
+            <h2>Filters</h2>
+            <div>
+                <p style="margin:0px">Purpose</p>
+                <input type="checkbox" id="op1" name="option1" value="Home">
+                <label for="op1">Home</label><br>
+                
+                <input type="checkbox" id="op2" name="option2" value="Office">
+                <label for="op2">Office</label><br>
+                <hr>
+            </div>
+            <div>
+                <p style="margin:0px">Price</p>
+                <input type="checkbox" id="op1" name="option1" value="<5,000">
+                <label for="op1"><5,000</label><br>
+                
+                <input type="checkbox" id="op2" name="option2" value="5,000 - 10,000">
+                <label for="op2">5,000 - 10,000</label><br>
+                
+                <input type="checkbox" id="op3" name="option3" value="10,000 - 50,000">
+                <label for="op3">10,000 - 50,000</label><br>
+
+                <input type="checkbox" id="op3" name="option4" value="10,000 - 50,000">
+                <label for="op3">>50,000</label>
+                <hr>
+            </div>
+            <div>
+                <p style="margin:0px">Material</p>
+                <input type="checkbox" id="op1" name="option1" value="Balsa Wood">
+                <label for="op1">Balsa Wood</label><br>
+                
+                <input type="checkbox" id="op2" name="option2" value="Office">
+                <label for="op2">Plywood</label><br>
+
+                <input type="checkbox" id="op3" name="option3" value="Teak Wood">
+                <label for="op3">Teak Wood</label><br>
+
+                <input type="checkbox" id="op4" name="option3" value="Composite wood">
+                <label for="op3">Composite wood</label><br>
+
+                <input type="checkbox" id="op4" name="option3" value="Veneer">
+                <label for="op3">Veneer</label><br>
+
+                <input type="checkbox" id="op5" name="option2" value="Steel">
+                <label for="op2">Steel</label><br>
+
+                <input type="checkbox" id="op6" name="option2" value="Plastic">
+                <label for="op2">Plastic</label><br>
+            </div>
+        </div>
+    </aside>
+
+    <section class="main">
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f1.jpg" alt="Brown Leather King Size Chair" class="image">
+                <div class="overlay">Brown Leather King Size Chair</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f2.jpg" alt="Sofa Set for Home" class="image">
+                <div class="overlay">Sofa Set for Home</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f3.jpg" alt="Wooden Drawer" class="image">
+                <div class="overlay">Wooden Drawer</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f4.jpg" alt="Avatar" class="image">
+                <div class="overlay">Chairs with background finish</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f5.jpg" alt="Dining Table" class="image">
+                <div class="overlay">Dining Table</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f6.jpg" alt="Wooden Chair with blue cushion" class="image">
+                <div class="overlay">Wooden Chair with blue cushion</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f7.jpg" alt="Garden Chair with Table" class="image">
+                <div class="overlay">Garden Chair with Table</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f8.jpg" alt="Office Table" class="image">
+                <div class="overlay">Office Table</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f9.jpg" alt="U Shaped Wooden Chair" class="image">
+                <div class="overlay">U Shaped Wooden Chair</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f10.jpg" alt="Wooden Drawing" class="image">
+                <div class="overlay">Wooden Drawing</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f11.jpg" alt="Dressing Table" class="image">
+                <div class="overlay">Dressing Table</div>
+            </a>
+        </div>
+        <div class="container">
+            <a href="Product Details.html">
+                <img src="images/f12.jpg" alt="Lemon Yellow Leather Sofa" class="image">
+                <div class="overlay">Lemon Yellow Leather Sofa</div>
+            </a>
+        </div>
+    </section>
+    <div class="copyright">
+        <hr>
+        <h4 style="text-align: center;">@copyright.</h4><br>
+        <p> This is for demonstration. You can use it without permission only. :)))))</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <title>Week 1</title>
+    <style>
+        header, footer{
+            height: 50px;
+            background-color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>HTML ClassRoom Page</h1></header>
+    <h1>1. Form</h1>
+    <p>The attributes are well aligned to make sure that the form is well organized.</p>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="Name" name="name" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="Email" required></td>
+            </tr>
+
+            <tr>
+                <td>Phone No</td>
+                <td><input type="number" name="number" min="6000000000" max="9999999999" required></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h4>Question: Choose the most appropriate option:</h4>
+                </td>
+                <td>
+                    <!--As long as the name is same for all radio buttons we can select one option only-->
+                    <input type="radio" id="a1" name="option" value="India is a state">
+                    <label for="a1">India is a state</label><br>
+                    
+                    <input type="radio" id="a2" name="option" value="India is a Country">
+                    <label for="a2">India is a Country</label><br>
+                    
+                    <input type="radio" id="a3" name="option" value="India is democratic Country">
+                    <label for="a3">India is democratic Country</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="cars">Choose a company:</label>
+                </td>
+                <td>
+                    <select name="company">
+                    <option value="select">Select</option>
+                    <option value="Benz">Benz</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Rolls Royce">Rolls Royce</option>
+                    <option value="Bently">Bently</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>    
+
+    <h1>2. Use of IFrames</h1>
+    <p>IFrames are used to open other web pages in the current web page.</p>
+    <p>Some websites will not let you use their link in other web pages. Hence, you will get refused to connect message when you hover on to the Iframe.</p>
+    
+    <iframe src="https://ninja.greatlearning.in/ninja_dashboard" ></iframe><hr>
+    <p>Your html pages can be seen as shown below</p>
+    <iframe src="1_Week1.html" frameborder="2" height="500" width="700"></iframe><br>
+    <iframe src="https://www.youtube.com/embed/eI4an8aSsgw" frameborder="1"></iframe><br>
+    <hr>
+    <h1>3. Video in Web Page</h1>
+    <p>To play video files we need to have controls in the video tag as shown in the next video.</p>
+    <video width="320" height="240">
+        <source src="sample_960x540.mp4" type="video/mp4">
+    </video><hr>
+
+    <p>We have controls in this video. This video doesn't contain audio. Hence we cannot hear any audio.</p>
+    <video width="320" height="240" controls>
+        <source src="sample_960x540.mp4" type="video/mp4">
+    </video><hr>
+
+    <p>To make the video auto play, we need to specify muted and autoplay in the video tag.</p>
+    <video width="49%" controls muted autoplay>
+        <source src="sample_960x540.mp4" type="video/mp4">
+    </video><hr>
+
+    <p>We can also play the videos in loop by specifying loop in video tag. Feel free to make changes.</p>
+    <video width="50%" controls muted autoplay loop>
+        <source src="sample_960x400_ocean_with_audio.mp4" type="video/mp4">
+    </video><hr>
+
+    <p>Similar to video files, we can add audio files in web pages. This tag contains two audio source files. 
+        If first source file is not available, then the next source file is considered. 
+        Second source file is being played here.</p>
+    <audio controls>
+        <!-- here the forest spelling is not as intended in the file name. 
+            hence the next source file is shown on the web page -->
+        <source src="mixkit-thunderstorm-in-the-foest-2396.wav" type="audio/wav">
+        <source src="mixkit-bird-singing-and-flapping-wings-2432.wav" type="audio/wav">
+    </audio>
+    <footer><h1>No @copyright. Anyone can use this file</h1></footer>
+</body>
+</html>

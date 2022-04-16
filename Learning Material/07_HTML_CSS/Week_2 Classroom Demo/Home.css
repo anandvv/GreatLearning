@@ -1,0 +1,33 @@
+header, footer{
+    background-color: cadetblue;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+}
+header{
+    position: absolute;
+    top: 0%;
+}
+footer{
+    position: absolute;
+    text-align: left;
+    bottom: 0%;
+}
+nav{
+    margin-top: 90px;
+    padding: 10px;
+    background-color:rgb(231, 150, 150);
+}
+article{
+    padding: 10px;
+}
+aside {
+    margin-top: 10px;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    float: right;
+    background-color: darkgray;
+    font-style: italic;
+    color: #29627e;
+}
