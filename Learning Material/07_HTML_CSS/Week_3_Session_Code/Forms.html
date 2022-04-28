@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <style>
+        /* simple selector */
+        body{
+            background-color: rgb(253, 243, 223);
+        }
+        header{
+            border-radius: 5px;
+            height: auto;
+            text-align: center;
+            background-color: rgb(192, 149, 233);
+        }
+        footer{
+            margin-top: 70px;
+            margin-bottom: 70px;
+            background-color: green;
+        }
+        p, h1{
+            padding: 10px;
+            margin: 0%;
+        }
+        section{
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            width: 50%;
+        }
+        article{
+            min-width: 300px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid steelblue;
+            background-color: white;
+            /* background-color: tomato; */
+        }
+        input{
+            width: 300px;
+            border: none;
+            background-color: white;
+            border-bottom: 1px solid gray;
+            height: 30px;
+        }
+        input, label, p, #district{
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button{
+            display: block;
+            margin: 20px;
+            width: 80px;
+            border-radius: 4px;
+            height: 30px;
+            color: white;
+            font-size: 18px;
+            float: right;
+            border: none;
+            background-color: rgb(175, 102, 243);
+        }
+        #district{
+            height: 50px;
+        }
+        /* combinator selector */
+        header p{
+            text-align: left;
+        }
+        article p{
+            font-weight: bold;
+            font-family: Helvetica ;
+            letter-spacing: 2px;
+        }
+
+        /* pseudo class selector */
+        input:focus{
+            outline-color: red;
+            background-color: blue;
+        }
+        
+        /* pseudo element selector */
+        header p::first-line{
+            font-weight: bold;
+            color: rgb(255, 0, 255);
+        }
+        article p::after{
+            content: "*";
+            color: red;
+        }
+        /* attribute selector */
+        input[name^="option"]{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Electricity Board Complaint Form</h1>
+            <p>Read below instructions before proceeding:<br> Make sure you fill all the fileds where * is provided</p>
+        </header>
+        <form action="">
+            <article>
+                <p>Name</p>
+                <input type="text" title="name" required>
+            </article>
+
+            <article>
+                <p>Meter Id</p>
+                <input type="number" required>
+            </article>
+
+            <article>
+                <p>Phone No</p>
+                <input type="number" min="6000000000" max="9999999999" required>
+            </article>
+
+            <article>
+                <p>Email Address</p>
+                <input type="email" required>
+            </article>
+
+            <article>
+                <h2>Address</h2>
+                <p>H:No</p>
+                <input type="text" required>
+
+                <p>Street</p>
+                <input type="text" required>
+
+                <p>Area</p>
+                <input type="text" required>
+
+                <p>District</p>
+                <select name="District" id="district" required>
+                    <option value="">Choose</option>
+                    <option value="Bangalore Urban">Bangalore Urban</option>
+                    <option value="Bangalore Rural">Bangalore Rural</option>
+                    <option value="Ramnagar">Ramnagar</option>
+                </select>
+            </article>
+
+            <article>
+                <p>Choose the issue Type</p>
+                <p>Check atleast one box without fail</p>
+                <input type="checkbox" id="c1" name="option1" value="Over Charge">
+                <label for="c1">Over Charge</label>
+                <br>
+                <input type="checkbox" id="c2" name="option2" value="Meter Board Not Working">
+                <label for="c2">Meter Board Not Working</label>
+                <br>
+                <input type="checkbox" id="c3" name="option3" value="Close the Meter">
+                <label for="c3">Close the Meter</label>
+                <br>
+                <input type="checkbox" id="c4" name="option4" value="Hard Copy Not Provided">
+                <label for="c3">Hard Copy Not Provided</label>
+            </article>
+
+            <article>
+                <p>Is this connection less than 2 month old?</p>
+                <input type="radio" id="c5" name="option" value="True" required>
+                <label for="c5">Yes</label>
+                <br>
+                <input type="radio" id="c6" name="option" value="False">
+                <label for="c6">No</label>
+            </article>
+            
+            <article>
+                <p>Describe Your Issue</p>
+                <textarea name="description" cols="30" rows="10" maxlength="100" required></textarea>
+            </article>
+
+            <article>
+                <p>When are you available?</p>
+                <input type="datetime-local" value="datetime-local" required>
+                <!-- <input type="time"> -->
+            </article>
+            <button>Reset</button>
+            <button>Submit</button>
+        </form>
+        <footer>
+            This form is developed by GL Team. <br> Only Learners of Great Learning can use this form
+        </footer>
+    </section>
+</body>
+</html>

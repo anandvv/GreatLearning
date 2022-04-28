@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<head>
+    <title>We Blog</title>
+    <style>
+        /* Simple Selector */
+        body{
+            background-color: teal;
+            margin: 0%;
+        }
+        header{
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+            font-size: x-large; /* 16px */
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(0, 0, 0);
+        }
+        /* Combinator Selector */
+        header h1{
+            text-align: center;
+        }
+        header a{
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            border-radius: 5px;
+            padding: 10px;
+            float: right;
+            text-decoration: none;
+            background-color: turquoise;
+            border: 2px solid steelblue;
+        }
+        header p{
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        nav{
+            padding: 5px;
+            background-color: black;
+        }
+        nav a{
+            display: inline;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 5px;
+            margin: 0%;
+            color: white;
+            background-color: black;
+        }
+        /* Pseudo class Selector */
+        nav a:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+        nav p:last-child{
+            margin: 0%;
+            font-size: 20px;
+            color: white;
+            float: right;
+        }
+
+        /* Simple Selector */
+        #ad{
+            position: fixed;
+            z-index: -1;
+            top: 20%;
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            background-image: url("images/f13.jpg");
+            background-size: contain;
+            background-repeat: repeat-x;
+        }
+        aside{
+            position: absolute;
+            top: 60%;
+            margin-left: 2%;
+            width: 15%;
+            height: auto;
+            padding: 10px;
+            float: left;
+            border: 1px solid brown;
+            background-color: white;
+        }
+        /* Combinator Selector */
+        aside a{
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+        }
+        /* Pseudo class Selector */
+        aside a:nth-child(odd){
+            background-color: gainsboro;
+        }
+        aside a:hover{
+            font-style: italic;
+            background-color: yellow;
+        }
+        /* Combinator Selector */
+        body section {
+            background-color: white;
+            color: black;
+            animation-name: colors;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        /* animation */
+        @keyframes colors{
+            0%{background-color: rgb(214, 214, 214);}
+            50%{background-color: rgb(250, 228, 209);}
+            100%{background-color: rgb(214, 214, 214);}
+        }
+        /* Combinator Selector with Pseudo class Selector*/
+        section > p:first-child{
+            width: 70%;
+            padding: 20px;
+            /* will remove all default margins */
+            margin: 0%;
+            margin-left: 20%;
+            font-weight: bold;
+            font-size: 50px;
+            background-color: blanchedalmond;
+        }
+        section article{
+            position: relative;
+            width: 70%;
+            left: 20%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /* Simple Selector with Pseudo element*/
+        #first_para::first-letter{
+            font-size: 50px;
+        }
+        /* Combinator Selector */
+        article > p{
+            padding: 10px;
+            /* observe right of the paragraph */
+            text-align: justify;
+            font-size: 20px;
+        }
+        /* Simple Selector */
+        #spacing{
+            margin-top: 350px;
+        }
+        .summary{
+            position: relative;
+            background-image: none;
+            border-left: 5px solid steelblue;
+            padding: 10px;
+            font-style: italic;
+        }
+        #pic{
+            padding: 10px;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            left: 30%;
+        }
+        /* Combinator Selector */
+        #pic img{
+            width: 500px;
+            height: 500px;
+        }
+        /* Simple Selector */
+        #comments{
+            background-color: white;
+            /* margin-left: 20%; */
+            padding: 20px;
+        }
+        /* Combinator Selector */
+        #comments h2{
+            margin: 0%;
+        }
+        /* Pseudo class Selector */
+        #comments p:last-child{
+            padding: 20px;
+            margin: 0%;
+            font-size: 20px;
+            background-color: wheat;
+        }
+        /* pseudo element Selector */
+        ::selection{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>We Blog</h1>
+        <a href="#">Sign In</a>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Science</a>
+        <a href="#">Society</a>
+        <a href="#">Nature</a>
+        <p> <span id="followers-count">6.2M </span> Follwers | <span id="views">10M+ </span> Views</p>
+    </nav>
+
+    <aside>
+        <h3>Author Other Articles:</h3>
+        <a href="##">"Why People Lie, Deny, and When All Else Fails, Set Books On Fire"</a>
+        <a href="##">"3 Tips for Writing With Purpose"</a>
+        <a href="##">"The Black Wonder Years is Making White Folks Mad"</a>
+        <a href=""></a>
+    </aside>
+
+    <div id="ad">
+        <h1>Avertisement</h1>
+    </div>
+
+    <section>
+        <p>
+            Remembering the 3 Great Evils Martin Luther King Jr. Warned Us About <br>
+            <span style="font-size: 16px; float: right;"> -Jacson Anup </span>
+        </p>
+
+        <div id="pic">
+            <img src="images/martin.jpg" alt="Martin Luther King Jr. Image">
+        </div>
+
+        <article>
+            <p id="first_para">
+                Dr. Martin Luther King Jr.'s name has become synonymous with the fight for civil rights in America. Yet, while King spent much of his life fighting against racial segregation and discrimination, many Americans do not realize that his views on race were just the tip of the iceberg. In one of his speeches, Martin Luther King Jr. warned us about three evils of our society — racism, extreme materialism, and militarism.
+            </p>
+            <p>
+                The theory of American exceptionalism did not hold water for King, who saw the country as one with potential, but far from perfect. In his speech, Dr. Martin Luther King Jr. told the crowd, "racism can well be, that corrosive evil that will bring down the curtain on western civilization." Unfortunately, the racism that King fought against is still with us in the modern era, making Black people more likely to live in poverty, be stopped, arrested, and killed by police, and less likely to own a home during his lifetime.
+            </p>
+            <p>
+                Racism is what divides White women from Black women in the women's movement, poor White people from poor Black people in the labor movement, and White academics from Black academics in the postmodernism movement. King was right to warn us about the racism tearing at America's seams. But, there has been pushback from many White Americans who claim racism is not a major problem. A few years back, a White man told me that "if aliens came down to earth, Black people and White people would get along, and work together." And while COVID is not an alien, it sure feels like we're living through an invasion some days. While a dispropriate amount of Black, Latino, and Native American people have died from COVID, none of it has brought White Americans closer to ditching racism. A common threat doesn't fix racism because only confronting racism can do that.
+            </p>
+            <p>
+                For many White people, racism is still far too uncomfortable of a subject, and thus remains, years after King's uplifting rhetoric, one of American society's great evils. "White America has had a Schizophrenic personality on the question of race, she has been torn between selves. A self in which she proudly professes the great principle of democracy and a self in which she madly practices the antithesis of democracy — Dr. Martin Luther King Jr." In the modern era, Nikole Hannah Jones has received a lot of criticism for writing, "our democracy's founding ideals were false when they were written. Black Americans have fought to make them true." However, these leaders, separated by time and space, sent our country the same message, that until Black people have equal access to participate in democracy, this country will continue to be conceptually two-faced, claiming to support a system of governance, which Black people have been deprived of participating in.
+            </p>
+            <div class="summary">
+                <h3>Summary</h3>
+                <p>
+                    "Racism can well be, that corrosive evil that will bring down the curtain on western civilization."
+                </p>
+            </div>
+        </article>
+        <br>
+    </section>
+
+    <section id="spacing">
+        <article>
+            <br>
+            <h1>Second Phase</h1>
+            <p>
+                "The second aspect of our afflicted society is extreme materialism" — Dr. Martin Luther King Jr.
+            </p>
+            <p>
+                We should remember that Dr. Martin Luther King Jr. considered extreme materialism one of our society's great evils. A system that prioritizes profits over people has lost its way. "Communism forgets that life is individual. Capitalism forgets that life is social, and the kingdom of brotherhood is found neither in the thesis of communism nor the antithesis of capitalism but in a higher synthesis." The current system in America, where the poor are getting poorer, and the rich are getting richer is the very system that Martin Luther King Jr. warned us about. When the pandemic first started, some felt shellshocked to learn that profits would be prioritized over the health of teachers, first-responders, and essential, but often forgotten workers. However, this cruelty is part of a longer trend, one that starts with the slave trade.
+            </p>
+            <p>
+                Dr. Martin Luther King Jr. warned America about the evils of excessive materialism, of amassing wealth despite the cost to people. Ironically, in a country that celebrates King annually, his views about democratic socialism remain unpopular amongst White conservatives and moderates. Only progressives support changing the system to offer services like free healthcare or ending child poverty through social programs.
+            </p>
+            <div class="summary">
+                <h3>Summary</h3>
+                <p>
+                    The final phase of our national sickness is the disease of militarism — Dr. Martin Luther King Jr.
+                </p>
+            </div>
+        </article>
+        <br>
+    </section>
+    
+    <section id="spacing">
+        <br>
+        <article>
+            <h2>Final Phase</h2>
+            <p>
+                "The final phase of our national sickness is the disease of militarism" — Dr. Martin Luther King Jr.
+            </p>
+            <p>
+                In America, we seem to have "money for war, but not for the poor." As a taxpayer, this is the disgusting reality we have to live with, that over 35 billion of our tax dollars are freely spent to support the military-industrial complex while we have millions of poor Americans who need homes to live in, food to eat, and clothes to wear. We are giving foreign aid without making sure that Americans have what they need to survive — it's bonkers. Dr. Martin Luther King Jr. warned about the disease of militarism as a way to shake America from its gun-loving slumber. For centuries, serving in the military has been seen as something Americans at home should be grateful for. They are protecting us and we should just say thank you or shut up altogether. But, brave men like Martin Luther King Jr. stood up against the Vietnam war and saw the everyday people overseas as victims of militarism.
+            </p>
+            <div class="summary">
+                <h3>Summary</h3>
+                <p>
+                    “This war has played havoc with the destiny of the entire world. It has torn up the Geneva Agreement, it has seriously impaired the United Nations, it has exacerbated the hatred between continents and worse still between races. It has frustrated our development at home, telling our own underprivileged citizens that we place insatiable military demands above their critical needs. It has greatly contributed to the forces of reaction in America and strengthened the military-industrial complex. Above all, the War in Vietnam has revealed what Senator Fulbright calls, “our nation’s arrogance of power”. — Dr. Martin Luther King Jr.
+                </p>
+            </div>
+        </article>
+        <hr>
+        <br>
+    </section>
+    
+    <section id="comments">
+        <h2>Comments</h2>
+        <h3>Jones</h3>
+        <p>
+            The way you wrire the blog inspires hunderends and millions of people and helps people to move on from wrong impression and do the right thing. <br>
+            keep up the good work and All the best!!!
+        </p>
+        <form action="">
+            Name: <input type="text" name="usrname"> <br>
+            <textarea rows="4" cols="50" name="comment" placeholder="Comment here..."></textarea>
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        <hr>
+        <p>
+            @Copyright <br>
+            This page is only for demonstration purpose
+        </p>
+    </section>
+</body>
+</html>
