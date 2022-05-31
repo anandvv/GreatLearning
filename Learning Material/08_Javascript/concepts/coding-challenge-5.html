@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p id="message">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus perferendis quo optio quasi numquam dicta quae quisquam non, tempore aspernatur velit quidem neque voluptate distinctio ducimus quaerat eaque sint eius?
+    </p>
+    <script>
+        document.querySelector('#btn').addEventListener('contextmenu', function(event){
+            event.preventDefault();
+        });
+
+        document.querySelector('#btn').addEventListener('mousedown', function(){
+            var pElement = document.querySelector('#message');
+            var btnElement = document.querySelector('#btn');
+            pElement.innerText = btnElement.innerText;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+        window.onload = function(){
+            alert('the page contains a button');
+        };
+
+        //Method 1
+        // var btnElement = document.getElementById('btn');
+        // btnElement.addEventListener('click', () => alert('Button clicked on the browser console'));
+
+        //Method 2
+        var btnElement2 = document.querySelector('#btn');
+        btnElement2.onclick = function(){
+            alert('Button clicked on the browser console');
+        }; 
+
+    </script>
+</body>
+</html>

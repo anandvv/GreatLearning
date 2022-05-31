@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            font-size: 24px;
+        }
+
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="red">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum veritatis culpa explicabo excepturi quod doloribus. Voluptatem explicabo quam autem temporibus, suscipit consequuntur, rerum neque placeat eligendi, dolorum nemo animi doloribus!
+        <button onclick="changeColor();">Change color</button>
+    </p>
+    <script>
+        function changeColor(){
+            var pElement = document.querySelector('p');
+            //pElement.style.color = 'red';
+            
+            //pElement.style.backgroundColor = 'green';
+            
+            //adding style inline
+            //pElement.style.fontSize = '24px';
+
+            //adding class names dynamically and applying already created styles
+            pElement.classList.add('big');
+
+            //removing classes dynamically
+            pElement.classList.remove('red');
+        }
+    </script>
+</body>
+</html>

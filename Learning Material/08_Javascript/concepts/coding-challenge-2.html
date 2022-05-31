@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="header">header1</h2>
+    <h2 class="header">header2</h2>
+    <h3 class="header">header3</h3>
+    <h3 class="header">header4</h3>
+    <h3 class="header">header5</h3>
+    <div id="div"></div>
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt adipisci quia voluptates exercitationem sed natus dolore asperiores odit iste obcaecati molestias doloremque tempora fuga expedita qui, voluptate nihil. Error!
+    </p>
+    <p class="paragraph">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, corrupti optio sapiente soluta quae qui mollitia architecto aut vero praesentium quia consectetur ut, incidunt accusamus explicabo dolorem eius, odio repellendus!
+    </p>
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptate veritatis dolor reprehenderit, similique unde ex facilis sunt. Mollitia, quis quisquam! Est corrupti mollitia odit quae illo nam iusto saepe?
+    </p>
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At velit odit, eum quos nisi harum illum delectus voluptatum, laudantium neque iure perferendis nobis enim! Nisi et amet aspernatur error? Optio.
+    </p>
+    <script>
+        var para = document.querySelectorAll('.paragraph');
+        console.log(para[0].innerText);
+
+
+        //add a new element to the DOM
+        setTimeout(function(){
+            var h1Element = document.createElement('h1');
+            h1Element.innerText = 'New Header';
+
+            var divElement = document.querySelector('div:first-of-type');
+        divElement.appendChild(h1Element);
+        },5000);
+
+        setTimeout(function(){
+            var headerElements = document.querySelectorAll('.header');
+            headerElements.forEach(element => {
+                element.innerText = "HEADINGS"
+            });
+
+            var pElements = document.querySelectorAll('.paragraph');
+            pElements.forEach(element => {
+                element.innerText = "PARAGRAPH"
+            });
+        }, 7000);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Dummy Header
+    </h2>
+    <p id="para-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, porro. Eos iste iusto natus esse praesentium laudantium atque recusandae accusantium voluptas! Debitis, eius iste minima animi at rem assumenda a!
+    </p>
+    <div class="xyz">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sequi, sapiente ut fuga ducimus voluptatem assumenda itaque et officia iusto accusamus, nam non ad, aut neque voluptatibus eaque molestiae mollitia?
+    </div>
+    <section class="xyz abc">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quidem voluptatibus rerum est dolorem quam at voluptas eaque quos ab, sint facere maiores quis sunt voluptate iure expedita repellat ipsum?
+    </section>
+
+    <script>
+        var para1 = document.getElementById('para-1');
+        console.log(para1);
+        var para2 = para1.childNodes;
+        console.log(para2);
+
+        var xyzElements = document.getElementsByClassName('xyz');
+        console.log(xyzElements);
+        console.log(xyzElements[0]);
+        console.log(xyzElements[1]);
+        console.log(xyzElements.length);
+        
+        var h2Elements = document.getElementsByTagName('h2');
+        console.log(h2Elements[0]);
+
+        var pElements = document.getElementsByTagName('p');
+        console.log('Number of p tags = ' + pElements.length);
+
+        //css selectors
+
+        //returns the first DOM node that satisfies the selection criteria
+        var el = document.querySelector('.xyz');
+        console.log(el);
+
+        //to select all elements in the DOM that match the selection criteria
+        var els = document.querySelectorAll('.xyz');
+        console.log(els);
+
+
+    </script>
+</body>
+</html>

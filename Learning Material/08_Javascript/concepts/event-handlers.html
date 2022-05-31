@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="para-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo magnam aperiam recusandae veniam molestias minima iste praesentium? Perspiciatis corporis est beatae similique quae deserunt eligendi cum, inventore necessitatibus ex vitae?
+    </p>
+
+    <button onclick="handleClick();">Click Me</button>
+    <script>
+        window.onload = function() {
+            alert('page has loaded');
+        };
+
+        function handleClick(){
+            alert('button clicked!');
+        }
+
+        //another way to handle click without the onclick attribute on the button - Preffered Way
+        //document.querySelector('button').onclick = handleClick;
+
+        //Method 1 - only 1 can be handled
+        // document.getElementById('para-1').onmouseover = function(){
+        //     alert('mouse is over para');
+        // };
+
+        //Method 2 - can setup multiple handlers this way
+        document.getElementById('para-1').addEventListener('mouseover', () => {
+            console.log('mouse is over para');
+        });
+    </script>
+</body>
+</html>
