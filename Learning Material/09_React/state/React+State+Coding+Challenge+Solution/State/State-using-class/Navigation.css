@@ -1,0 +1,20 @@
+.nav{
+    border: 1px solid black;
+    /* position: fixed; */
+    width: 200px;
+    height: auto;
+}
+.background {
+    background-color: rgb(0, 0, 0, 0.3);
+    border: 1px solid black;
+    width: 194px;
+    padding: 2px;
+    font-size: 50px;
+    font-size: large;
+    display: block;
+    text-align: center;
+}
+.background:active{
+    background-color: black;
+    color: white;
+}
