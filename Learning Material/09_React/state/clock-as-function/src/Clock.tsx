@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 
 function Clock() {
     const [time, setTime] = useState(new Date());
-    setTime(new Date());
 
+    function tick(){
+        setTime(new Date());
+    }
+
+    setInterval(tick, 1000);
+    
   return (
     <div>
       <h1>Hello, world!</h1>
