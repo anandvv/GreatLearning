@@ -1,0 +1,11 @@
+button{
+    background-color: aquamarine;
+    font-size: 30px;
+    margin: 10px;
+}
+table{
+    margin-top: 20px;
+}
+table, td {
+    border: 1px solid black;
+}
