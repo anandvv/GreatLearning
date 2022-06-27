@@ -1,0 +1,16 @@
+.linkActive{
+    text-decoration: underline;
+}
+.linkActive.active{
+    background-color: antiquewhite;
+    color: red;
+    text-decoration: none;
+}
+
+a { 
+    padding-right: 10px;
+}
+
+.contactDetails {
+    padding: 10px;
+}
