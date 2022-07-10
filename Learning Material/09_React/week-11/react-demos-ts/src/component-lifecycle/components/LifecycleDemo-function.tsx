@@ -29,7 +29,8 @@ const LifecycleDemo = ( ) => {
     
             try {
                 const products = await fetchProductsOfPage( page );
-
+                
+                //set products first because changing state will cause a re-render
                 setProducts( products );
                 setStatus( 'LOADED' );
             } catch( error ) {

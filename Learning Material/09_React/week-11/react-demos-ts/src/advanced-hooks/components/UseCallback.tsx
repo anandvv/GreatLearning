@@ -7,6 +7,7 @@ const box = {
 
 export const UseCallbackParent = () => {
     const [ count, setCount ] = useState<number>( 0 );
+    //useCalback will return the same function from memory, rather than create a new one each time the parent is rendered
     const incrCount = useCallback( () => setCount( ( x : number ) => x + 1 ), [] );
     
     const [ dummyState, setDummyState ] = useState<string>( 'dummy state');
